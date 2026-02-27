@@ -1,4 +1,4 @@
-package auccsion;
+package auction;
 
 import java.time.LocalDateTime;
 

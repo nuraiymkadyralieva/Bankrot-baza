@@ -1,4 +1,4 @@
-package auccsion;
+package auction;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
