@@ -223,7 +223,11 @@ public class BankrotParser {
             if (parts.length > 0) data.setLotNumber(parts[0].trim().replace("Лот №", "").trim());
             if (parts.length > 1) data.setAuctionNumber(parts[1].trim().replace("торги №", "").trim());
         }
+// === Окончание приема заявок ===
+        String appEndRaw = safeXpathText(driver,
+                "//*[contains(text(),'Приём заявок до')]/following::*[1]");
 
+        data.setApplicationEndDate(parseDateTime(appEndRaw));
         data.setAddress(extractAddress(driver));
 
         data.setStartPrice(safeXpathText(driver,

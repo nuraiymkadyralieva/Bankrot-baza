@@ -59,7 +59,8 @@ public class ExcelExporter {
                 row.createCell(3).setCellValue(clean(lot.getBidStep()));            // 4
                 row.createCell(4).setCellValue(clean(lot.getDepositAmount()));      // 5
 
-                setDateCell(row, 5, lot.getStartAuc(), dateStyle);                 // 6
+                setDateCell(row, 5, lot.getStartAuc(), dateStyle);        // начало торгов
+                setDateCell(row, 6, lot.getApplicationEndDate(), dateStyle);  // окончание (берем прием заявок)               // 6
 
 
                 row.createCell(7).setCellValue(clean(lot.getDocumentationUrl()));   // 8
